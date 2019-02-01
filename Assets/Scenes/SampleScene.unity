@@ -6601,6 +6601,7 @@ GameObject:
   - component: {fileID: 1114180582}
   - component: {fileID: 1114180587}
   - component: {fileID: 1114180586}
+  - component: {fileID: 1114180588}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6639,7 +6640,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6741,7 +6742,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   speed: 0
   canAirControl: 1
-  jumpForce: 600
+  jumpForce: 1000
   groundPosition: {fileID: 309951942}
   isGrounded: 0
   colliderToDisableOnCrouch: {fileID: 0}
@@ -6757,6 +6758,25 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &1114180588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114180581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63ef088d586aed34aa01d4763ddaafa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1153687792
 GameObject:
   m_ObjectHideFlags: 0

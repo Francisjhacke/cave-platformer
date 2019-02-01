@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour
     public float runSpeed = 40.0f;
 
     private CharacterController2D controller;
-    //private Animator animator;
+    private Animator animator;
 
     private float horizontalMove = 0.0f;
     private bool isJumping = false;
@@ -16,18 +16,18 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxis("Horizontal") * runSpeed;
-        //animator.SetFloat("speed", horizontalMove);
+        animator.SetFloat("Speed", horizontalMove);
         if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
-            //animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -35,6 +35,7 @@ public class PlayerInput : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, isJumping);
         isJumping = false;
+        animator.SetBool("isJumping", false);
     }
 
 }
